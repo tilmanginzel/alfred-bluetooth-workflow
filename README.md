@@ -4,7 +4,12 @@
 
 [Alfred 3](https://www.alfredapp.com/) workflow to quickly connect / disconnect Bluetooth devices.
 
-**Features:**
+**Installation**
+
+Simply download the latest [`Bluetooth Connector.alfredworkflow`](https://github.com/tilmanginzel/alfred-bluetooth-workflow/releases)
+ release and double-click to import into Alfred. 
+
+**Features**
 
 * Connect / disconnect to any known Bluetooth device by typing `blt {device}`
 * Optionally filter devices by name
