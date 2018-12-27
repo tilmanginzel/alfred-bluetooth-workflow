@@ -11,7 +11,7 @@
 * Already connected devices are highlighted with a green icon
 * Battery percentage is shown if available
 
-☐ todo: insert preview gif
+<img src="./preview.jpg" width="600" alt="Preview: Alfred Bluetooth Workflow" />
 
 This workflow uses the [BluetoothConnector](https://github.com/lapfelix/BluetoothConnector) by Felix Lapalme to easily connect / disconnect a Bluetooth device by its MAC address.
 
