@@ -18,7 +18,12 @@ Simply download the latest [`Bluetooth Connector.alfredworkflow`](https://github
 
 <img src="./preview.jpg" width="600" alt="Preview: Alfred Bluetooth Workflow" />
 
-This workflow uses the [BluetoothConnector](https://github.com/lapfelix/BluetoothConnector) by Felix Lapalme to easily connect / disconnect a Bluetooth device by its MAC address.
+**Attribution**
+
+* [trietsch/alfred-bluetooth-connector](https://github.com/trietsch/alfred-bluetooth-connector) by Robin Trietsch was used as an inspiration for this workflow implementation
+* [lapfelix/BluetoothConnector](https://github.com/lapfelix/BluetoothConnector) by Felix Lapalme is used to easily connect / disconnect a Bluetooth device by its MAC address
+
+**License**
 
 ```
 The MIT License (MIT)
