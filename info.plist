@@ -8,6 +8,10 @@
 	<string>Tools</string>
 	<key>connections</key>
 	<dict>
+		<key>433CDC29-5D28-45FD-8B54-303EDC5331A5</key>
+		<array/>
+		<key>43CF8D37-B5FF-48BC-A4FF-A333F9EF42A2</key>
+		<array/>
 		<key>D1F62184-2F0A-4BDB-A1C0-63C67DD19002</key>
 		<array>
 			<dict>
@@ -35,6 +39,34 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>if [ $(./blueutil --is-connected {query}) -eq 1 ]
+then
+	./blueutil --disconnect {query}
+else
+	./blueutil --connect {query}
+fi</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>11C37C96-EEEC-43C7-8D24-83D7987D52DA</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -54,7 +86,7 @@
 				<key>queuedelaymode</key>
 				<integer>0</integer>
 				<key>queuemode</key>
-				<integer>1</integer>
+				<integer>2</integer>
 				<key>runningsubtext</key>
 				<string>Fetching list of bluetooth devices...</string>
 				<key>script</key>
@@ -82,23 +114,141 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
+				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
 				<key>escaping</key>
 				<integer>102</integer>
+				<key>keyword</key>
+				<string>blt-toggle</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Bluetooth: Toggle On/Off...</string>
 				<key>script</key>
-				<string>./BluetoothConnector {query}</string>
+				<string>./blueutil -p toggle</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
 				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Bluetooth: Toggle On/Off</string>
 				<key>type</key>
 				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>11C37C96-EEEC-43C7-8D24-83D7987D52DA</string>
+			<string>43CF8D37-B5FF-48BC-A4FF-A333F9EF42A2</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>blt-on</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Powering on Bluetooth...</string>
+				<key>script</key>
+				<string>./blueutil -p 1</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Bluetooth: On</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>433CDC29-5D28-45FD-8B54-303EDC5331A5</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>blt-off</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Powering off Bluetooth...</string>
+				<key>script</key>
+				<string>./blueutil -p 0</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Bluetooth: Off</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>CCF72B05-C811-41FB-B0C1-12CFFA15DB4E</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -110,16 +260,37 @@
 		<key>11C37C96-EEEC-43C7-8D24-83D7987D52DA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>460</integer>
+			<integer>370</integer>
 			<key>ypos</key>
-			<integer>140</integer>
+			<integer>70</integer>
+		</dict>
+		<key>433CDC29-5D28-45FD-8B54-303EDC5331A5</key>
+		<dict>
+			<key>xpos</key>
+			<integer>80</integer>
+			<key>ypos</key>
+			<integer>330</integer>
+		</dict>
+		<key>43CF8D37-B5FF-48BC-A4FF-A333F9EF42A2</key>
+		<dict>
+			<key>xpos</key>
+			<integer>80</integer>
+			<key>ypos</key>
+			<integer>200</integer>
+		</dict>
+		<key>CCF72B05-C811-41FB-B0C1-12CFFA15DB4E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>80</integer>
+			<key>ypos</key>
+			<integer>460</integer>
 		</dict>
 		<key>D1F62184-2F0A-4BDB-A1C0-63C67DD19002</key>
 		<dict>
 			<key>xpos</key>
-			<integer>170</integer>
+			<integer>80</integer>
 			<key>ypos</key>
-			<integer>140</integer>
+			<integer>70</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>

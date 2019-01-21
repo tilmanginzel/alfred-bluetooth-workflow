@@ -12,23 +12,24 @@ Simply download the latest [`Bluetooth Connector.alfredworkflow`](https://github
 **Features**
 
 * Connect / disconnect to any known Bluetooth device by typing `blt {device}`
-* Optionally filter devices by name
-* Already connected devices are highlighted with a green icon
-* Battery percentage is shown if available
+  * Optionally filter devices by name
+  * Already connected devices are highlighted with a green icon
+  * Battery percentage is shown if available
+* Toggle Bluetooth on or off via `blt-on`, `blt-off` or simply `blt-toggle`
 
 <img src="./preview.jpg" width="600" alt="Preview: Alfred Bluetooth Workflow" />
 
 **Attribution**
 
 * [trietsch/alfred-bluetooth-connector](https://github.com/trietsch/alfred-bluetooth-connector) by Robin Trietsch was used as an inspiration for this workflow implementation
-* [lapfelix/BluetoothConnector](https://github.com/lapfelix/BluetoothConnector) by Felix Lapalme is used to easily connect / disconnect a Bluetooth device by its MAC address
+* [toy/blueutil](https://github.com/toy/blueutil) is used to easily connect/disconnect a Bluetooth device by its MAC address and toggle Bluetooth on/off. It was originally developed by Frederik Seiffert and is now being continued by Ivan Kuchin.
 
 **License**
 
 ```
 The MIT License (MIT)
 
-Copyright (c) 2018 Tilman Ginzel
+Copyright (c) 2018 - 2019 Tilman Ginzel
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
