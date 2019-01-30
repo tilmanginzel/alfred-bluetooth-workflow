@@ -6,12 +6,11 @@ from lxml import etree
 from workflow import Workflow
 
 log = None
-GITHUB_SLUG = 'trietsch/temp-alfred-bluetooth-workflow'
+GITHUB_SLUG = 'tilmanginzel/alfred-bluetooth-workflow'
 
 
 def _find_element_by_key(device, key):
-    elements = device.xpath(
-        ".//*[text()='{}']/following-sibling::string[1]".format(key))
+    elements = device.xpath(".//*[text()='{}']/following-sibling::string[1]".format(key))
     return elements[0] if len(elements) else None
 
 
@@ -26,19 +25,16 @@ def _read_boolean_value(device, key):
 
 
 def _read_devices():
-    proc = subprocess.Popen(
-        ['system_profiler', 'SPBluetoothDataType', '-xml'], stdout=subprocess.PIPE)
+    proc = subprocess.Popen(['system_profiler', 'SPBluetoothDataType', '-xml'], stdout=subprocess.PIPE)
     bluetooth_devices_xml_raw = proc.stdout.read()
-    bluetooth_devices_xml = etree.fromstring(bluetooth_devices_xml_raw).xpath(
-        "//*[text()='device_title']/following-sibling::array[1]/dict")
+    bluetooth_devices_xml = etree.fromstring(bluetooth_devices_xml_raw).xpath("//*[text()='device_title']/following-sibling::array[1]/dict")
 
     bluetooth_devices = []
 
     for device in bluetooth_devices_xml:
         is_connected = _read_boolean_value(device, 'device_isconnected')
         battery = _read_string_value(device, 'device_batteryPercent')
-        subtitle = ('Connected' if is_connected else 'Disconnected') + \
-            (', ' + battery if battery else '')
+        subtitle = ('Connected' if is_connected else 'Disconnected') + (', ' + battery if battery else '')
 
         bluetooth_devices.append({
             'type': 'file:skipcheck',
