@@ -15,7 +15,7 @@ Simply download the latest [`Bluetooth Connector.alfredworkflow`](https://github
   * Optionally filter devices by name
   * Already connected devices are highlighted with a green icon
   * Battery percentage is shown if available
-* Toggle Bluetooth on or off via `blt-on`, `blt-off` or simply `blt-toggle`
+* Power Bluetooth on or off via `blt-on`, `blt-off` or simply toggle via `blt-t`
 * Workflow updates via `blt workflow:update` (Thanks to @trietsch)
 
 <img src="./preview1.jpg" width="600" alt="Preview: Alfred Bluetooth Workflow" />
