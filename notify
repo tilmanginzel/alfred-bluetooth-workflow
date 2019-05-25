@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+while getopts ":m:i:" opt; do
+    case $opt in
+        m) MESSAGE="$OPTARG"
+        ;;
+        i) ICON="$OPTARG"
+        ;;
+    esac
+done
+
+CONTENT_IMAGE_OPT=""
+if ! [ -z $ICON ]
+then
+    CONTENT_IMAGE_OPT="-contentImage ./icons/${ICON}.png"
+fi
+
+./terminal-notifier.app/Contents/MacOS/terminal-notifier \
+    -title "Bluetooth" \
+    -sender "de.tilmanginzel.alfred.bluetooth" \
+    -message "${MESSAGE}" \
+    $CONTENT_IMAGE_OPT
