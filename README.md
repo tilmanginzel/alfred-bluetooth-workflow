@@ -23,8 +23,9 @@ Simply download the latest [`Bluetooth Connector.alfredworkflow`](https://github
 
 ## Attribution
 
-* [trietsch/alfred-bluetooth-connector](https://github.com/trietsch/alfred-bluetooth-connector) by Robin Trietsch was used as an inspiration for this workflow implementation
+* [trietsch/alfred-bluetooth-connector](https://github.com/trietsch/alfred-bluetooth-connector) by Robin Trietsch was used as an inspiration for this workflow implementation.
 * [toy/blueutil](https://github.com/toy/blueutil) is used to easily connect/disconnect a Bluetooth device by its MAC address and toggle Bluetooth on/off. It was originally developed by Frederik Seiffert and is now being continued by Ivan Kuchin.
+* [julienXX/terminal-notifier](https://github.com/julienXX/terminal-notifier) is used to show a notification of the result for each command.
 
 ## License
 
