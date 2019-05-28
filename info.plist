@@ -132,7 +132,7 @@ then
 
     if [ $(./blueutil --is-connected {query}) -eq 0 ]
     then
-        ./notify -m "Disconnected $title"
+        ./notify -m "Disconnected from $title"
     else
         ./notify -m "Failed to disconnect $title" -i failure
     fi
