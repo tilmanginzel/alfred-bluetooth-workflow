@@ -126,26 +126,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>if [ $(./blueutil --is-connected {query}) -eq 1 ]
-then
-    ./blueutil --disconnect {query}
-
-    if [ $(./blueutil --is-connected {query}) -eq 0 ]
-    then
-        ./notify -m "Disconnected from $title"
-    else
-        ./notify -m "Failed to disconnect $title" -i failure
-    fi
-else
-    ./blueutil --connect {query}
-
-    if [ $(./blueutil --is-connected {query}) -eq 1 ]
-    then
-        ./notify -m "Connected to $title" -i success
-    else
-        ./notify -m "Failed to connect to $title" -i failure
-    fi
-fi</string>
+				<string>./scripts/blt.sh {query} "$title"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -168,14 +149,7 @@ fi</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>./blueutil -p 1
-
-if [ $(./blueutil -p) -eq 1 ]
-then
-    ./notify -m "Bluetooth turned on" -i success
-else
-    ./notify -m "Failed to turn Bluetooth on" -i failure
-fi</string>
+				<string>./scripts/blt-on.sh</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -219,14 +193,7 @@ fi</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>./blueutil -p toggle
-
-if [ $(./blueutil -p) -eq 1 ]
-then
-    ./notify -m "Bluetooth turned on" -i success
-else
-    ./notify -m "Bluetooth turned off"
-fi</string>
+				<string>./scripts/blt-toggle.sh</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -291,14 +258,7 @@ fi</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>./blueutil -p 0
-
-if [ $(./blueutil -p) -eq 0 ]
-then
-    ./notify -m "Bluetooth turned off"
-else
-    ./notify -m "Failed to turn Bluetooth off" -i failure
-fi</string>
+				<string>./scripts/blt-off.sh</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
