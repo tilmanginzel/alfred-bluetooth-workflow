@@ -18,6 +18,7 @@ Simply download the latest [`Bluetooth Connector.alfredworkflow`](https://github
 * Toggle Bluetooth on or off via `blt-on`, `blt-off` or simply `blt-toggle`
 * Workflow updates via `blt workflow:update` (Thanks to @trietsch)
 * Desktop notifications for all commands and their results
+  * Failed commands can be retried by simply clicking on the notification
 
 <img src="./preview1.jpg" width="600" alt="Preview: Alfred Bluetooth Workflow" />
 <img src="./preview2.jpg" width="600" alt="Preview: Alfred Bluetooth Workflow" />

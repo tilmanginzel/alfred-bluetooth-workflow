@@ -14,7 +14,7 @@ then
     then
         ./notify.sh -m "Disconnected from ${TITLE}"
     else
-        ./notify.sh -m "Failed to disconnect ${TITLE}" -i failure
+        ./notify.sh -m "Failed to disconnect ${TITLE}. Click to retry." -i failure -c "blt.sh ${DEVICE} \"${TITLE}\""
     fi
 else
     ../blueutil --connect ${DEVICE}
@@ -23,6 +23,6 @@ else
     then
         ./notify.sh -m "Connected to ${TITLE}" -i success
     else
-        ./notify.sh -m "Failed to connect to ${TITLE}" -i failure
+        ./notify.sh -m "Failed to connect to ${TITLE}. Click to retry." -i failure -c "blt.sh ${DEVICE} \"${TITLE}\""
     fi
 fi

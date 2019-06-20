@@ -9,5 +9,5 @@ if [[ $(../blueutil -p) -eq 1 ]]
 then
     ./notify.sh -m "Bluetooth turned on" -i success
 else
-    ./notify.sh -m "Failed to turn Bluetooth on" -i failure
+    ./notify.sh -m "Failed to turn Bluetooth on. Click to retry." -i failure -c "blt-on.sh"
 fi
