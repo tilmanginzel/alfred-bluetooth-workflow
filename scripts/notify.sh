@@ -3,7 +3,7 @@
 >&2 echo "[debug] ./notify script triggered"
 
 PARENT_PATH=$(cd "$(dirname "${BASH_SOURCE[0]}")"; pwd -P)
-cd ${PARENT_PATH}
+cd "${PARENT_PATH}"
 
 while getopts ":m:i:c:" opt; do
     case ${opt} in

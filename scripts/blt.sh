@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 PARENT_PATH=$(cd "$(dirname "${BASH_SOURCE[0]}")"; pwd -P)
-cd ${PARENT_PATH}
+cd "${PARENT_PATH}"
 
 DEVICE=$1
 TITLE=$2
