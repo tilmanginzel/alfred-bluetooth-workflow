@@ -42,7 +42,7 @@ then
 else
     ../terminal-notifier.app/Contents/MacOS/terminal-notifier \
         -title "Bluetooth" \
-        -sender "de.tilmanginzel.alfred.bluetooth" \
+        -appIcon "${PARENT_PATH}/../icon.png" \
         -message "${MESSAGE}" \
         ${CONTENT_IMAGE_OPT}
 fi
