@@ -25,7 +25,9 @@ fi
 COMMAND_OPT=""
 if ! [[ -z ${COMMAND} ]]
 then
-    COMMAND_OPT="${PARENT_PATH}/$COMMAND"
+    # command path must be escaped with '\ ' instead of quotes ""
+    ESCAPED_PARENT_PATH=$(echo "${PARENT_PATH}" | sed 's/ /\\ /g')
+    COMMAND_OPT="${ESCAPED_PARENT_PATH}/$COMMAND"
 fi
 
 >&2 echo "[debug] Send notification (message: ${MESSAGE}, image: ${CONTENT_IMAGE_OPT}, command: ${COMMAND_OPT})"
