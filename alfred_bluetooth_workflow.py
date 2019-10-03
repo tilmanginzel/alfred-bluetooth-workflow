@@ -2,7 +2,7 @@ import subprocess
 import sys
 
 from lxml import etree
-from workflow import Workflow
+from workflow import Workflow3
 
 log = None
 GITHUB_SLUG = 'tilmanginzel/alfred-bluetooth-workflow'
@@ -59,7 +59,7 @@ def main(wf):
     filtered_devices = wf.filter(query, devices, key=lambda k: k['title'])
 
     for device in filtered_devices:
-        wf.add_item(
+        item = wf.add_item(
             type=device['type'],
             title=device['title'],
             subtitle=device['subtitle'],
@@ -68,10 +68,12 @@ def main(wf):
             valid=True
         )
 
+        item.setvar('title', device['title'])
+
     wf.send_feedback()
 
 
 if __name__ == '__main__':
-    wf = Workflow(update_settings={'github_slug': GITHUB_SLUG})
+    wf = Workflow3(update_settings={'github_slug': GITHUB_SLUG})
     log = wf.logger
     sys.exit(wf.run(main))

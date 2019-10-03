@@ -17,14 +17,17 @@ Simply download the latest [`Bluetooth Connector.alfredworkflow`](https://github
   * Battery percentage is shown if available
 * Toggle Bluetooth on or off via `blt-on`, `blt-off` or simply `blt-toggle`
 * Workflow updates via `blt workflow:update` (Thanks to @trietsch)
+* Desktop notifications for all commands and their results
+  * Failed commands can be retried by simply clicking on the notification
 
 <img src="./preview1.jpg" width="600" alt="Preview: Alfred Bluetooth Workflow" />
 <img src="./preview2.jpg" width="600" alt="Preview: Alfred Bluetooth Workflow" />
 
 ## Attribution
 
-* [trietsch/alfred-bluetooth-connector](https://github.com/trietsch/alfred-bluetooth-connector) by Robin Trietsch was used as an inspiration for this workflow implementation
+* [trietsch/alfred-bluetooth-connector](https://github.com/trietsch/alfred-bluetooth-connector) by Robin Trietsch was used as an inspiration for this workflow implementation.
 * [toy/blueutil](https://github.com/toy/blueutil) is used to easily connect/disconnect a Bluetooth device by its MAC address and toggle Bluetooth on/off. It was originally developed by Frederik Seiffert and is now being continued by Ivan Kuchin.
+* [julienXX/terminal-notifier](https://github.com/julienXX/terminal-notifier) is used to show a notification of the result for each command.
 
 ## License
 
