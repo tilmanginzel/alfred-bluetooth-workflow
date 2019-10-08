@@ -9,6 +9,14 @@
 Simply download the latest [`Bluetooth Connector.alfredworkflow`](https://github.com/tilmanginzel/alfred-bluetooth-workflow/releases)
  release and double-click to import into Alfred. 
 
+Note regarding MacOS 10.15 (Catalina): Since MacOS 10.15, [Notarization](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution) is required for apps.
+As this workflow and its distributed binaries are not notarized, please try the following workaround:
+
+- Install an [old version](https://github.com/tilmanginzel/alfred-bluetooth-workflow/releases/download/v0.4.0/Bluetooth.Connector.alfredworkflow) of the workflow
+- Update via `blt workflow:update`
+
+See [#9](https://github.com/tilmanginzel/alfred-bluetooth-workflow/issues/9) for more information and other possible [workarounds](https://github.com/tilmanginzel/alfred-bluetooth-workflow/issues/9#issuecomment-539647706).
+
 ## Features
 
 * Connect / disconnect to any known Bluetooth device by typing `blt {device}`
