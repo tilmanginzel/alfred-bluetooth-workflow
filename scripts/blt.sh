@@ -8,18 +8,14 @@ TITLE=$2
 
 if [[ $(../blueutil --is-connected ${DEVICE}) -eq 1 ]]
 then
-    ../blueutil --disconnect ${DEVICE}
-
-    if [[ $(../blueutil --is-connected ${DEVICE}) -eq 0 ]]
+    if [[ $(../blueutil --disconnect ${DEVICE}) -eq 0 ]]
     then
         ./notify.sh -m "Disconnected from ${TITLE}"
     else
         ./notify.sh -m "Failed to disconnect ${TITLE}. Click to retry." -i failure -c "blt.sh ${DEVICE} \"${TITLE}\""
     fi
 else
-    ../blueutil --connect ${DEVICE}
-
-    if [[ $(../blueutil --is-connected ${DEVICE}) -eq 1 ]]
+    if [[ $(../blueutil --connect ${DEVICE}) -eq 0 ]]
     then
         ./notify.sh -m "Connected to ${TITLE}" -i success
     else
