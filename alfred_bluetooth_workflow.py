@@ -1,50 +1,32 @@
 import subprocess
 import sys
+import json
 
-from lxml import etree
 from workflow import Workflow3
 
 log = None
 GITHUB_SLUG = 'tilmanginzel/alfred-bluetooth-workflow'
 
 
-def _find_element_by_key(device, key):
-    elements = device.xpath(".//*[text()='{}']/following-sibling::string[1]".format(key))
-    return elements[0] if len(elements) else None
-
-
-def _read_string_value(device, key):
-    elem = _find_element_by_key(device, key)
-    return elem.text if elem is not None else None
-
-
-def _read_boolean_value(device, key):
-    elem = _find_element_by_key(device, key)
-    return True if elem is not None and elem.text == 'attrib_Yes' else False
-
-
 def _read_devices():
-    proc = subprocess.Popen(['system_profiler', 'SPBluetoothDataType', '-xml'], stdout=subprocess.PIPE)
-    bluetooth_devices_xml_raw = proc.stdout.read()
-    bluetooth_devices_xml = etree.fromstring(bluetooth_devices_xml_raw).xpath("//*[text()='device_title']/following-sibling::array[1]/dict")
+    proc = subprocess.Popen(['./blueutil', '--paired', '--format=JSON'], stdout=subprocess.PIPE)
 
+    devices_raw = json.loads(proc.stdout.read())
     bluetooth_devices = []
 
-    for device in bluetooth_devices_xml:
-        is_connected = _read_boolean_value(device, 'device_isconnected')
-        battery = _read_string_value(device, 'device_batteryPercent')
-        subtitle = ('Connected' if is_connected else 'Disconnected') + (', ' + battery if battery else '')
+    for device in devices_raw:
+        is_connected = device['connected']
 
         bluetooth_devices.append({
             'type': 'file:skipcheck',
-            'arg': _read_string_value(device, 'device_addr'),
-            'subtitle': subtitle,
+            'arg': device['address'],
+            'subtitle': 'Connected' if is_connected else 'Disconnected',
             'connected': is_connected,
-            'title': device.xpath('.//key[1]')[0].text,
+            'title': device['name'],
             'icon': './icons/bluetooth-' + ('connected' if is_connected else 'disconnected') + '.png'
         })
 
-    return bluetooth_devices
+    return sorted(bluetooth_devices, key = lambda x: (-x['connected'], x['title']))
 
 
 def main(wf):

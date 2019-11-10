@@ -22,7 +22,6 @@ See [#9](https://github.com/tilmanginzel/alfred-bluetooth-workflow/issues/9) for
 * Connect / disconnect to any known Bluetooth device by typing `blt {device}`
   * Optionally filter devices by name
   * Already connected devices are highlighted with a green icon
-  * Battery percentage is shown if available
 * Toggle Bluetooth on or off via `blt-on`, `blt-off` or simply `blt-toggle`
 * Workflow updates via `blt workflow:update` (Thanks to @trietsch)
 * Desktop notifications for all commands and their results
