@@ -15,16 +15,17 @@ def _read_devices():
     bluetooth_devices = []
 
     for device in devices_raw:
-        is_connected = device['connected']
+        if device['name'] and device['address'] and device['connected'] is not None:
+            is_connected = device['connected']
 
-        bluetooth_devices.append({
-            'type': 'file:skipcheck',
-            'arg': device['address'],
-            'subtitle': 'Connected' if is_connected else 'Disconnected',
-            'connected': is_connected,
-            'title': device['name'],
-            'icon': './icons/bluetooth-' + ('connected' if is_connected else 'disconnected') + '.png'
-        })
+            bluetooth_devices.append({
+                'type': 'file:skipcheck',
+                'arg': device['address'],
+                'subtitle': 'Connected' if is_connected else 'Disconnected',
+                'connected': is_connected,
+                'title': device['name'],
+                'icon': './icons/bluetooth-' + ('connected' if is_connected else 'disconnected') + '.png'
+            })
 
     return sorted(bluetooth_devices, key = lambda x: (-x['connected'], x['title']))
 
