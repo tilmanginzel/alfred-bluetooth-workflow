@@ -28,8 +28,8 @@ See [#9](https://github.com/tilmanginzel/alfred-bluetooth-workflow/issues/9) for
 * Desktop notifications for all commands and their results
   * Failed commands can be retried by simply clicking on the notification
 
-<img src="./preview1.jpg" width="600" alt="Preview: Alfred Bluetooth Workflow" />
-<img src="./preview2.jpg" width="600" alt="Preview: Alfred Bluetooth Workflow" />
+<img src="./preview1.png" width="600" alt="Preview: Alfred Bluetooth Workflow" />
+<img src="./preview2.png" width="600" alt="Preview: Alfred Bluetooth Workflow" />
 
 ## Attribution
 
