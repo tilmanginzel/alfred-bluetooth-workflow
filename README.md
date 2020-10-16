@@ -23,6 +23,7 @@ See [#9](https://github.com/tilmanginzel/alfred-bluetooth-workflow/issues/9) for
   * Optionally filter devices by name
   * Already connected devices are highlighted with a green icon
 * Toggle Bluetooth on or off via `blt-on`, `blt-off` or simply `blt-toggle`
+* Restart Bluetooth via `blt-restart`
 * Workflow updates via `blt workflow:update` (Thanks to @trietsch)
 * Desktop notifications for all commands and their results
   * Failed commands can be retried by simply clicking on the notification

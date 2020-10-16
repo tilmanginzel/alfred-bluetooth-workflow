@@ -60,6 +60,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>D97A2D31-6878-4649-AE3C-CD69ED1DEF86</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5776104C-BB46-4D4D-98C8-96DD98AE4A2D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Tilman Ginzel</string>
@@ -78,6 +91,8 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -116,7 +131,7 @@
 			<key>uid</key>
 			<string>D1F62184-2F0A-4BDB-A1C0-63C67DD19002</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -273,6 +288,50 @@
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>blt-restart</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Bluetooth: Restart</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>D97A2D31-6878-4649-AE3C-CD69ED1DEF86</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./scripts/blt-restart.sh</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>5776104C-BB46-4D4D-98C8-96DD98AE4A2D</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -291,6 +350,13 @@
 			<integer>80</integer>
 			<key>ypos</key>
 			<integer>330</integer>
+		</dict>
+		<key>5776104C-BB46-4D4D-98C8-96DD98AE4A2D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>370</integer>
+			<key>ypos</key>
+			<integer>590</integer>
 		</dict>
 		<key>61C63D54-3FD7-4B06-8D2D-BE986209EF33</key>
 		<dict>
@@ -333,6 +399,13 @@
 			<integer>80</integer>
 			<key>ypos</key>
 			<integer>70</integer>
+		</dict>
+		<key>D97A2D31-6878-4649-AE3C-CD69ED1DEF86</key>
+		<dict>
+			<key>xpos</key>
+			<integer>80</integer>
+			<key>ypos</key>
+			<integer>590</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
