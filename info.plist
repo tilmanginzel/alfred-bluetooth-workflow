@@ -131,7 +131,7 @@
 			<key>uid</key>
 			<string>D1F62184-2F0A-4BDB-A1C0-63C67DD19002</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -408,6 +408,10 @@
 			<integer>590</integer>
 		</dict>
 	</dict>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>0.10.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/tilmanginzel/alfred-bluetooth-workflow</string>
 </dict>

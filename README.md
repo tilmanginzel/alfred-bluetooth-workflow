@@ -42,7 +42,7 @@ See [#9](https://github.com/tilmanginzel/alfred-bluetooth-workflow/issues/9) for
 ```
 The MIT License (MIT)
 
-Copyright (c) 2018 - 2019 Tilman Ginzel, Robin Trietsch
+Copyright (c) 2018 - 2021 Tilman Ginzel, Robin Trietsch
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
