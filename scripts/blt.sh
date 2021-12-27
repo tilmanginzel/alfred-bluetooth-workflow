@@ -8,8 +8,7 @@ TITLE=$2
 
 if [[ $(../blueutil --is-connected ${DEVICE}) -eq 1 ]]
 then
-    ../blueutil --disconnect ${DEVICE}
-    ../blueutil --wait-disconnect ${DEVICE} 5
+    ../blueutil --disconnect ${DEVICE} --wait-disconnect ${DEVICE} 5
     if [[ $(../blueutil --is-connected ${DEVICE}) -eq 0 ]]
     then
         ./notify.sh -m "Disconnected from ${TITLE}"
