@@ -112,7 +112,7 @@
 				<key>runningsubtext</key>
 				<string>Fetching list of bluetooth devices...</string>
 				<key>script</key>
-				<string>python alfred_bluetooth_workflow.py "{query}"</string>
+				<string>python3 alfred_bluetooth_workflow.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
