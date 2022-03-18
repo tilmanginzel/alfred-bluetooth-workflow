@@ -36,13 +36,14 @@ See [#9](https://github.com/tilmanginzel/alfred-bluetooth-workflow/issues/9) for
 * [trietsch/alfred-bluetooth-connector](https://github.com/trietsch/alfred-bluetooth-connector) by Robin Trietsch was used as an inspiration for this workflow implementation.
 * [toy/blueutil](https://github.com/toy/blueutil) is used to easily connect/disconnect a Bluetooth device by its MAC address and toggle Bluetooth on/off. It was originally developed by Frederik Seiffert and is now being continued by Ivan Kuchin.
 * [julienXX/terminal-notifier](https://github.com/julienXX/terminal-notifier) is used to show a notification of the result for each command.
+* [deanishe/alfred-workflow](https://github.com/deanishe/alfred-workflow) is used to check for new workflow updates. Many thanks to [NorthIsUp/alfred-workflow-py3](https://github.com/NorthIsUp/alfred-workflow-py3) and [tomy0000000/alfred-workflow-py3](https://github.com/tomy0000000/alfred-workflow-py3) for providing a Python 3 compatible version.
 
 ## License
 
 ```
 The MIT License (MIT)
 
-Copyright (c) 2018 - 2021 Tilman Ginzel, Robin Trietsch
+Copyright (c) 2018 - 2022 Tilman Ginzel, Robin Trietsch
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
