@@ -9,7 +9,9 @@
 Simply download the latest [`Bluetooth Connector.alfredworkflow`](https://github.com/tilmanginzel/alfred-bluetooth-workflow/releases)
  release and double-click to import into Alfred. 
 
-Note regarding MacOS 10.15 (Catalina): Since MacOS 10.15, [Notarization](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution) is required for apps.
+Note regarding macOS 14 (Sonoma): Starting with Sonoma, it is necessary to give Alfred bluetooth access. It can be done by navigating to System Settings > Privacy & Security > Bluetooth and adding Alfred to the list of apps by clicking the plus icon and choosing Alfred.
+
+Note regarding macOS 10.15 (Catalina): Since MacOS 10.15, [Notarization](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution) is required for apps.
 As this workflow and its distributed binaries are not notarized, please try the following workaround:
 
 - Install an [old version](https://github.com/tilmanginzel/alfred-bluetooth-workflow/releases/download/v0.4.0/Bluetooth.Connector.alfredworkflow) of the workflow
